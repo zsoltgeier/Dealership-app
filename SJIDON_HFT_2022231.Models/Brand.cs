@@ -29,5 +29,13 @@ namespace SJIDON_HFT_2022231.Models
         [JsonIgnore]
         public virtual Dealership Dealership { get; set; }
 
+        [NotMapped]
+        public virtual ICollection<Car> Cars { get; set; }
+
+        public Brand()
+        {
+            Cars = new HashSet<Car>();
+        }
+
     }
 }
