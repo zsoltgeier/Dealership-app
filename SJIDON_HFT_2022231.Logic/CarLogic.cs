@@ -57,18 +57,7 @@ namespace SJIDON_HFT_2022231.Logic
             carRepo.Update(obj);
         }
 
-        public IEnumerable<Car> GetCarFromJapaneseDealership()
-        {
-            var q = from cars in carRepo.ReadAll()
-                    join brands in brandRepo.ReadAll()
-                    on cars.Brand_Id equals brands.Id
-                    join dealerships in dealershipRepo.ReadAll()
-                    on brands.Dealership_Id equals dealerships.Id
-                    where dealerships.Name == "Japanese car dealership"
-                    select cars;
-            return q;
-        }
-
+        
         public IEnumerable<Car> GetCarWhereMoreThan18Employees()
         {
             var q = from cars in carRepo.ReadAll()
