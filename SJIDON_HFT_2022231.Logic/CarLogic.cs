@@ -14,8 +14,10 @@ namespace SJIDON_HFT_2022231.Logic
         IRepository<Brand> brandRepo;
         IRepository<Car> carRepo;
 
-        public CarLogic(IRepository<Car> carRepo)
+        public CarLogic(IRepository<Dealership> dealershipRepo, IRepository<Brand> brandRepo, IRepository<Car> carRepo)
         {
+            this.dealershipRepo = dealershipRepo;
+            this.brandRepo = brandRepo;
             this.carRepo = carRepo;
         }
 
