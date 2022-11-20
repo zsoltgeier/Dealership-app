@@ -138,9 +138,15 @@ namespace SJIDON_HFT_2022231.Test
         }
 
         [Test]
-        public void GetDealershipWhereCarOver500hp()
+        public void GetDealershipWhereCar313hp_ReturnsCorrectInstance()
         {
-            Assert.That(dealershipl.GetDealershipWhereCarOver500hp().Distinct().Count(), Is.EqualTo(2));
+            Assert.That(dealershipl.GetDealershipWhereCar313hp().First().Name, Is.EqualTo("Japanese car dealership"));
+        }
+
+        [Test]
+        public void GetDealershipWherePriceIs209700_ReturnsCorrectInstance()
+        {
+            Assert.That(dealershipl.GetDealershipWherePriceIs209700().First().Name, Is.EqualTo("German car dealership"));
         }
 
         private IQueryable<Car> FakeCarObject()
