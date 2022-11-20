@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace SJIDON_HFT_2022231.Logic
 {
-    internal interface IDealershipLogic
+    public interface IDealershipLogic
     {
         //CRUD
         void Create(Dealership obj);

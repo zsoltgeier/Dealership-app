@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace SJIDON_HFT_2022231.Logic
 {
-    internal interface IBrandLogic
+    public interface IBrandLogic
     {
         //CRUD
         void Create(Brand obj);

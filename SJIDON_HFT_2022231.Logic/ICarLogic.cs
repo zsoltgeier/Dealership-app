@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace SJIDON_HFT_2022231.Logic
 {
-    internal interface ICarLogic
+    public interface ICarLogic
     {
         //CRUD
         void Create(Car obj);
