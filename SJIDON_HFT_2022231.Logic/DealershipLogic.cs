@@ -11,6 +11,8 @@ namespace SJIDON_HFT_2022231.Logic
     public class DealershipLogic : IDealershipLogic
     {
         IRepository<Dealership> dealershipRepo;
+        IRepository<Brand> brandRepo;
+        IRepository<Car> carRepo;
 
         public DealershipLogic(IRepository<Dealership> dealershipRepo)
         {
@@ -52,5 +54,29 @@ namespace SJIDON_HFT_2022231.Logic
         {
             dealershipRepo.Update(obj);
         }
+        public IEnumerable<Dealership> GetDealershipWhereCarOver500hp()
+        {
+            var q = from cars in carRepo.ReadAll()
+                    join brands in brandRepo.ReadAll()
+                    on cars.Brand_Id equals brands.Id
+                    join dealerships in dealershipRepo.ReadAll()
+                    on brands.Dealership_Id equals dealerships.Id
+                    where cars.Horsepower > 500
+                    select dealerships;
+            return q;
+        }
+
+        public IEnumerable<Dealership> GetDealershipWhereCarModelIsCharger()
+        {
+            var q = from cars in carRepo.ReadAll()
+                    join brands in brandRepo.ReadAll()
+                    on cars.Brand_Id equals brands.Id
+                    join dealerships in dealershipRepo.ReadAll()
+                    on brands.Dealership_Id equals dealerships.Id
+                    where cars.Model == "Charger"
+                    select dealerships;
+            return q;
+        }
+
     }
 }
