@@ -16,5 +16,10 @@ namespace SJIDON_HFT_2022231.Logic
         void Update(Dealership obj);
         void Delete(int id);
 
+
+        IEnumerable<Dealership> GetDealershipWhereCar313hp();
+        IEnumerable<Dealership> GetDealershipWhereCarModelIsCharger();
+        IEnumerable<Dealership> GetDealershipWherePriceIs209700();
+
     }
 }

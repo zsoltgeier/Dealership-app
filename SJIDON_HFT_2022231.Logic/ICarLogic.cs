@@ -15,5 +15,11 @@ namespace SJIDON_HFT_2022231.Logic
         IQueryable<Car> ReadAll();
         void Update(Car obj);
         void Delete(int id);
+
+
+        IEnumerable<Car> GetCarWhereMoreThan18Employees();
+
+        IEnumerable<Car> GetCarWhereBrandOwnerIsBMWGroup();
+
     }
 }
