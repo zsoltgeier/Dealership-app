@@ -26,9 +26,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Others", "Others", "{FCA31E
 		.gitignore = .gitignore
 	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DealershipApp.WpfClient", "DealershipApp.WpfClient\DealershipApp.WpfClient.csproj", "{C26520A2-1A3C-4E94-944F-98E1D79208D9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SJIDON_HFT_2022231.WpfClient", "DealershipApp.WpfClient\SJIDON_HFT_2022231.WpfClient.csproj", "{C26520A2-1A3C-4E94-944F-98E1D79208D9}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DealershipApp.JSClient", "DealershipApp.JSClient\DealershipApp.JSClient.csproj", "{88FE39F0-EF96-4D17-A427-51D91BBC639F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SJIDON_HFT_2022231.JSClient", "DealershipApp.JSClient\SJIDON_HFT_2022231.JSClient.csproj", "{88FE39F0-EF96-4D17-A427-51D91BBC639F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
